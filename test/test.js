@@ -1,7 +1,7 @@
 var path = require('path');
 var chai = require('chai');
 var expect = chai.expect;
-var nock = require('nock');
+
 
 const Browser = require('zombie');
 const http = require('http');
@@ -13,19 +13,14 @@ describe('Page Load', function() {
     var createServer = require("http-server").createServer;
     var server = createServer({ root: path.join(__dirname, "../") });
     server.listen(3000);
-    var scope = nock('http://news-summary-api.herokuapp.com', {
-                  reqheaders: {
-                    'Access-Control-Allow-Origin': 'http://localhost:3000',
-                  }
-                })
-                .get('/guardian?apiRequestUrl=http://content.guardianapis.com/search?from-date=2016-07-07&show-elements=image&q=uk')
-                .reply(200, require('./apiResponse.json'));
+
   });
 
 
   describe('Task Functionality', function() {
     beforeEach(function(done) {
-      this.browser.visit('/', done);
+      this.browser.visit('/?api=test', done);
+
     });
 
     it("page exists", function(){
@@ -33,7 +28,7 @@ describe('Page Load', function() {
     });
 
     it("populates headlines on page", function(){
-      expect(this.browser.text('#list-container')).to.include('Tory leadership battle:');
+      expect(this.browser.text('#list-container')).to.include('Cameron eats huge pie');
     });
 
   });
