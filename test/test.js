@@ -31,5 +31,9 @@ describe('Page Load', function() {
       expect(this.browser.text('#list-container')).to.include('Cameron eats huge pie');
     });
 
+    it("shows summary for story", function() {
+      this.browser.pressButton('#summary-button-0');
+      expect(this.browser.text('#summary-container')).to.include('This is a summary');
+    });
   });
 });
