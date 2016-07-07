@@ -1,0 +1,29 @@
+#list-container {
+  margin: 20px;
+}
+
+#list-container li {
+  min-height: 50px;
+  background-color: white;
+  margin: 30px;
+  padding: 5px;
+}
+
+#main-wrapper {
+  margin: 100 auto 100;
+  padding: 10px;
+  background-color: grey;
+  min-height: 600px;
+  width: 70%;
+}
+
+.title {
+  background-color: #fff;
+  text-align: center;
+  margin: 10px 10px 50;
+  font-size: 20;
+
+}
+.list-item-menu {
+  float: right;
+}

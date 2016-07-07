@@ -1,0 +1,33 @@
+{
+  "name": "news-feed",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node_modules/http-server/bin/http-server ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/unalterable/news-feed.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/unalterable/news-feed/issues"
+  },
+  "homepage": "https://github.com/unalterable/news-feed#readme",
+  "dependencies": {
+    "chai": "^3.5.0",
+    "http-server": "^0.9.0",
+    "mocha": "^2.5.3",
+    "mustache": "^2.2.1",
+    "xmlhttprequest": "^1.8.0"
+  },
+  "devDependencies": {
+    "zombie": "^4.2.1"
+  }
+}
